@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Security.Cryptography.X509Certificates;
 
 namespace LoggingKata
 {
@@ -24,21 +26,13 @@ namespace LoggingKata
                 return null; // TODO Implement
             }
 
-            // grab the latitude from your array at index 0
+            
             var latitude = double.Parse(cells[0]);
-            // grab the longitude from your array at index 1
+            
             var longitude = double.Parse(cells[1]);
-            // grab the name from your array at index 2
+            
             var name = cells[2];
-            // Your going to need to parse your string as a `double`
-
-            // which is similar to parsing a string as an `int`
-
-            // Done You'll need to create a TacoBell class
-            // that conforms to ITrackable
-
-            // Then, you'll need an instance of the TacoBell class
-            // With the name and point set correctly
+           
             var point = new Point();
             point.Latitude = latitude;
             point.Longitude = longitude;
@@ -46,10 +40,21 @@ namespace LoggingKata
             tacoBell.Name = name;
             tacoBell.Location = point;
 
-            // Then, return the instance of your TacoBell class
-            // Since it conforms to ITrackable
+            
 
             return tacoBell;
         }
+            
+        public double ShouldParseLongitude(string line)
+        {
+            throw new NotImplementedException();
+        }
+        public double ShouldParseLatitude(string line)
+        {
+            throw new NotImplementedException;
+        }
+    
+    
+    
     }
 }
