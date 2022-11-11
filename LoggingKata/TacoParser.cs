@@ -45,13 +45,7 @@ namespace LoggingKata
             return tacoBell;
         }
             
-        public double ShouldParseLongitude(string line)
-        {
-            throw new NotImplementedException();
-        }
-        public double ShouldParseLatitude(string line)
-        {
-            throw new NotImplementedException;
+        
         }
     
     

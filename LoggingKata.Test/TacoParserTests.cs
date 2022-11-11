@@ -36,10 +36,10 @@ namespace LoggingKata.Test
             TacoParser tacoParser = new TacoParser();
 
             //Act
-            var actual = tacoParser.ShouldParseLongitude(line);
+            var actual = tacoParser.Parse(line);
 
             //Assert
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual.Location.Longitude);
         }
 
         [Theory]
@@ -50,9 +50,9 @@ namespace LoggingKata.Test
             //Arrange
             TacoParser tacoParser = new TacoParser();
             //Act
-            var actual = tacoParser.ShouldParseLatitude(line);
+            var actual = tacoParser.Parse(line);
             //Assert
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual.Location.Latitude);
         }
 
     }
